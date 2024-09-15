@@ -6,7 +6,7 @@ const HeaderSection = () => {
       <div className="container">
         <div className="flex justify-between items-center h-24 md:h-28">
           <div>
-            <img src="/assets/images/logo.svg" alt="TransactX" />
+            <img src="/assets/images/logo_white.png" alt="TransactX" />
           </div>
           <div className="flex items-center gap-4">
             <CutCornerButton
