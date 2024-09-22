@@ -8,7 +8,6 @@ import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 import Hero from "../sections/Hero";
 import LatestPosts from "../sections/LatestPosts";
-import Testimonials from "../sections/Testimonials";
 
 const posts = await getCollection("blog");
 const latestPosts = posts.sort((a, b) => {
@@ -24,7 +23,7 @@ const latestPosts = posts.sort((a, b) => {
   <FeaturesCards client:load/>
   <FeaturesGrid client:load/>
   <LatestPosts latestPosts={latestPosts} client:load/>
-  <Testimonials client:load/>
+  <!-- <Testimonials client:load/> -->
   <CallToAction client:load/>
   <Footer />
 </DefaultLayout>
