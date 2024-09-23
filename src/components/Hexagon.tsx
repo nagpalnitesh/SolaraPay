@@ -27,7 +27,7 @@ const Hexagon = (
   }, []);
 
   return (
-    <div className="inline-flex">
+    <div className="inline-flex relative">
       <svg
         width="82"
         height="72"
@@ -72,7 +72,7 @@ const Hexagon = (
             ease: "linear",
           }}
           style={{
-            strokeDasharray: `500 ${totalPathLength}`,
+            strokeDasharray: `500 ${totalPathLength - 500}`,
             width: size,
             height: size,
           }}

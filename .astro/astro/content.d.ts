@@ -212,42 +212,34 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
-"careers": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">;
-  render(): Render[".md"];
-}>;
 "positions": {
 "frontend-developer.md": {
 	id: "frontend-developer.md";
   slug: "frontend-developer";
   body: string;
   collection: "positions";
-  data: any
+  data: InferEntrySchema<"positions">
 } & { render(): Render[".md"] };
 "marketing-specialist.md": {
 	id: "marketing-specialist.md";
   slug: "marketing-specialist";
   body: string;
   collection: "positions";
-  data: any
+  data: InferEntrySchema<"positions">
 } & { render(): Render[".md"] };
 "product-manager.md": {
 	id: "product-manager.md";
   slug: "product-manager";
   body: string;
   collection: "positions";
-  data: any
+  data: InferEntrySchema<"positions">
 } & { render(): Render[".md"] };
 "ux-designer.md": {
 	id: "ux-designer.md";
   slug: "ux-designer";
   body: string;
   collection: "positions";
-  data: any
+  data: InferEntrySchema<"positions">
 } & { render(): Render[".md"] };
 };
 

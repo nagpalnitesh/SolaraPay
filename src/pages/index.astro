@@ -1,29 +1,23 @@
 ---
 import { getCollection } from "astro:content";
 import DefaultLayout from "../layouts/Default.astro";
-import CallToAction from "../sections/CallToAction";
 import FeaturesCards from "../sections/FeaturesCards";
 import FeaturesGrid from "../sections/FeaturesGrid";
-import Footer from "../sections/Footer";
-import Header from "../sections/Header";
 import Hero from "../sections/Hero";
-import LatestPosts from "../sections/LatestPosts";
+// import LatestPosts from "../sections/LatestPosts";
 
 const posts = await getCollection("blog");
-const latestPosts = posts.sort((a, b) => {
-  if(a.data.pubDate.valueOf() === b.data.pubDate.valueOf()) return 0
-  return a.data.pubDate.valueOf() > b.data.pubDate.valueOf() ? -1 : 1
-}).slice(0,4)
+const latestPosts = posts
+  .sort((a, b) => {
+    if (a.data.pubDate.valueOf() === b.data.pubDate.valueOf()) return 0;
+    return a.data.pubDate.valueOf() > b.data.pubDate.valueOf() ? -1 : 1;
+  })
+  .slice(0, 4);
 ---
 
-
 <DefaultLayout>
-  <Header />
-  <Hero client:load/>
-  <FeaturesCards client:load/>
-  <FeaturesGrid client:load/>
-  <LatestPosts latestPosts={latestPosts} client:load/>
-  <!-- <Testimonials client:load/> -->
-  <CallToAction client:load/>
-  <Footer />
+  <Hero client:load />
+  <FeaturesCards client:load />
+  <FeaturesGrid client:load />
+  <!-- <LatestPosts latestPosts={latestPosts} client:load /> -->
 </DefaultLayout>

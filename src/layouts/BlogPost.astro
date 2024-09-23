@@ -1,0 +1,16 @@
+---
+import InteriorHero from "../components/InteriorHero.astro";
+import Tag from "../components/Tag";
+import DefaultLayout from "./Default.astro";
+
+const { post } = Astro.props;
+---
+
+<DefaultLayout>
+  <InteriorHero>
+    <Tag>
+      hello {post}
+      <!-- {post.category} -->
+    </Tag>
+  </InteriorHero>
+</DefaultLayout>
