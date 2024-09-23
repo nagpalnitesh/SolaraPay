@@ -11,8 +11,7 @@ import DefaultLayout from "../../layouts/Default.astro";
 import { getPostColorFromCategory } from "../../utils/postUtils";
 
 const posts = (await getCollection("blog")).sort(
-  (a: { data: { pubDate: number } }, b: { data: { pubDate: number } }) =>
-    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const latestPost = posts[0];
