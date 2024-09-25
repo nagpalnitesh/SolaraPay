@@ -47,8 +47,8 @@ const Footer = () => {
           </div>
           <nav className="hidden md:flex text-zinc-500 gap-12 font-heading font-black">
             <a href="#">Home</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
+            {/* <a href="#">Blog</a>
+            <a href="#">Careers</a> */}
             <a href="#">Contact</a>
           </nav>
         </div>
